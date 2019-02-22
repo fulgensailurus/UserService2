@@ -20,14 +20,12 @@ export class CreateUser1550871075151 implements MigrationInterface {
           type: 'varchar',
           length: '128',
           isNullable: false,
-          isUnique: true,
         },
         {
           name: 'lastName',
           type: 'varchar',
           length: '128',
           isNullable: false,
-          isUnique: true,
         },
       ],
     }));
