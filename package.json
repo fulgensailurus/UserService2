@@ -1,0 +1,23 @@
+{
+  "name": "UserService",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fulgensailurus/UserService.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fulgensailurus/UserService/issues"
+  },
+  "homepage": "https://github.com/fulgensailurus/UserService#readme",
+  "devDependencies": {
+    "tslint-config-prettier": "^1.18.0"
+  }
+}
