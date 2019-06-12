@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  api:
+    container_name: shoppingList
+    build:
+      context: .
+    command: npm run serve
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/data/src
+      - /data/src/node_modules
