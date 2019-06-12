@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   api:
-    container_name: shoppingList
+    container_name: shoppinglist-userService
     build:
       context: .
     command: npm run serve
