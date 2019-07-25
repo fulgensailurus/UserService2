@@ -1,4 +1,22 @@
-language: generic
+language: bash
+
+services:
+    - docker
+
+env:
+  global:
+    - IMAGE_NAME=fulgensailurus/user_service
 
 script:
-    - echo "Building"
+  - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
+
+after_script:
+  - docker run --rm "$IMAGE_NAME" npm run tslint || travis_terminate 1
+  - docker run --rm "$IMAGE_NAME" npm run test || travis_terminate 1
+  - docker images
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
