@@ -42,7 +42,7 @@ describe('user routes', () => {
         .expect(httpStatus.OK);
 
       expect(body).toHaveLength(1);
-      expect(body[0]).toMatchObject({id: expect.any(String), firstName: 'John', lastName: 'Doe' });
+      expect(body[0]).toMatchObject({ id: expect.any(String), firstName: 'John', lastName: 'Doe' });
     });
   });
 });
